@@ -1,0 +1,172 @@
+[
+    {
+        "id": 1,
+        "name": "Naruto Uzumaki",
+        "description": "Naruto Uzumaki is een shinobi van Konohagakure en de hoofdpersoon van de serie. Hij wordt beschouwd als een van de sterkste ninja ooit en draagt de Negen Staarten Fox in zich.",
+        "age": 32,
+        "active": true,
+        "birthdate": "1990-10-10",
+        "image_url": "https://github.com/NabilHabrani/Naruto/blob/main/naruto_uzumaki.png?raw=true",
+        "position": "Hokage",
+        "hobbies": ["Ramen eten", "Trainen", "Vrienden helpen"],
+        "team": {
+            "id": 1,
+            "name": "Team 7",
+            "leader": "Kakashi Hatake",
+            "village": "Konohagakure"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Sasuke Uchiha",
+        "description": "Sasuke Uchiha is een lid van het beroemde Uchiha-clan en een van de sterkste Uchiha ooit. Hij is bekend om zijn Sharingan en zijn zoektocht naar kracht.",
+        "age": 32,
+        "active": true,
+        "birthdate": "1990-07-23",
+        "image_url": "https://github.com/NabilHabrani/Naruto/blob/main/sasuke_uchiha.png?raw=true",
+        "position": "Jonin",
+        "hobbies": ["Kracht zoeken", "Trainen", "Rache nemen"],
+        "team": {
+            "id": 1,
+            "name": "Team 7",
+            "leader": "Kakashi Hatake",
+            "village": "Konohagakure"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Sakura Haruno",
+        "description": "Sakura Haruno is een kunoichi uit Konohagakure en lid van Team 7. Ze is bekend om haar medische ninjutsu vaardigheden en haar grote intellect.",
+        "age": 32,
+        "active": true,
+        "birthdate": "1992-03-28",
+        "image_url": "https://github.com/NabilHabrani/Naruto/blob/main/sakura_haruno.png?raw=true",
+        "position": "Jonin",
+        "hobbies": ["Medische ninjutsu", "Training", "Botanica"],
+        "team": {
+            "id": 1,
+            "name": "Team 7",
+            "leader": "Kakashi Hatake",
+            "village": "Konohagakure"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Kakashi Hatake",
+        "description": "Kakashi Hatake is een legendarische Jonin van Konohagakure en de trainer van Team 7. Hij is beroemd om zijn Sharingan en zijn vele technieken.",
+        "age": 48,
+        "active": true,
+        "birthdate": "1974-09-15",
+        "image_url": "https://github.com/NabilHabrani/Naruto/blob/main/kakashi_hatake.png?raw=true",
+        "position": "Jonin",
+        "hobbies": ["Lezen", "Training", "Koffie drinken"],
+        "team": {
+            "id": 1,
+            "name": "Team 7",
+            "leader": "Kakashi Hatake",
+            "village": "Konohagakure"
+        }
+    },
+    {
+        "id": 5,
+        "name": "Itachi Uchiha",
+        "description": "Itachi Uchiha is een lid van het Uchiha-clan en een geniaal shinobi. Hij is beroemd om zijn Mangekyo Sharingan en zijn Actieken.",
+        "age": 40,
+        "active": true,
+        "birthdate": "1984-06-09",
+        "image_url": "https://github.com/NabilHabrani/Naruto/blob/main/itachi_uchiha.png?raw=true",
+        "position": "Actieken (ex-Jonin)",
+        "hobbies": ["Piano spelen", "Reflectie", "Bescherming"],
+        "team": {
+            "id": 2,
+            "name": "Actieken",
+            "leader": "Itachi Uchiha",
+            "village": "Onafhankelijk"
+        }
+    },
+    {
+        "id": 6,
+        "name": "Hinata Hyuga",
+        "description": "Hinata Hyuga is een kunoichi uit het machttige Hyuga-clan. Ze is bekend om haar Byakugan en haar vriendelijke aard, evenals haar gevoelens voor Naruto.",
+        "age": 32,
+        "active": true,
+        "birthdate": "1992-12-27",
+        "image_url": "https://github.com/NabilHabrani/Naruto/blob/main/hinata_hyuga.png?raw=true",
+        "position": "Jonin",
+        "hobbies": ["Trainen", "Familie", "Kokende kunst"],
+        "team": {
+            "id": 3,
+            "name": "Team 8",
+            "leader": "Kurenai Yuhi",
+            "village": "Konohagakure"
+        }
+    },
+    {
+        "id": 7,
+        "name": "Shikamaru Nara",
+        "description": "Shikamaru Nara is een geniusachtige shinobi uit Konohagakure. Hij is bekend om zijn intelligentie en zijn Shadow Possession-techniek.",
+        "age": 32,
+        "active": true,
+        "birthdate": "1992-09-22",
+        "image_url": "https://github.com/NabilHabrani/Naruto/blob/main/shikamaru_nara.png?raw=true",
+        "position": "Jonin",
+        "hobbies": ["Strategie denken", "Schaak", "Sigaretten"],
+        "team": {
+            "id": 4,
+            "name": "Team 10",
+            "leader": "Asuma Sarutobi",
+            "village": "Konohagakure"
+        }
+    },
+    {
+        "id": 8,
+        "name": "Gaara",
+        "description": "Gaara is een shinobi uit Sunagakure en een voormalige Jinchuriki van de One-Tailed Beast. Hij is nu de Kazekage van zijn dorp.",
+        "age": 32,
+        "active": true,
+        "birthdate": "1992-01-19",
+        "image_url": "https://github.com/NabilHabrani/Naruto/blob/main/gaara.png?raw=true",
+        "position": "Kazekage",
+        "hobbies": ["Zand manipulatie", "Bescherming", "Leiderschap"],
+        "team": {
+            "id": 5,
+            "name": "Sunagakure",
+            "leader": "Gaara",
+            "village": "Sunagakure"
+        }
+    },
+    {
+        "id": 9,
+        "name": "Rock Lee",
+        "description": "Rock Lee is een harde werker uit Konohagakure die geen ninjutsu of genjutsu kan gebruiken. Hij is echter zeer bekwaam in taijutsu en determijnatie.",
+        "age": 32,
+        "active": true,
+        "birthdate": "1992-11-27",
+        "image_url": "https://github.com/NabilHabrani/Naruto/blob/main/rock_lee.png?raw=true",
+        "position": "Jonin",
+        "hobbies": ["Taijutsu training", "Hardlopen", "Vriendschap"],
+        "team": {
+            "id": 3,
+            "name": "Team 8",
+            "leader": "Kurenai Yuhi",
+            "village": "Konohagakure"
+        }
+    },
+    {
+        "id": 10,
+        "name": "Jiraiya",
+        "description": "Jiraiya is een van de Legendarische Drie Shinobi van Konohagakure en de mentor van Naruto. Hij is beroemd om zijn krachtige technieken en zijn gulheid.",
+        "age": 60,
+        "active": false,
+        "birthdate": "1966-11-15",
+        "image_url": "https://github.com/NabilHabrani/Naruto/blob/main/jiraiya.png?raw=true",
+        "position": "Jonin (Emeritus)",
+        "hobbies": ["Schrijven", "Onderzoek", "Trainen"],
+        "team": {
+            "id": 6,
+            "name": "Legendarische Drie",
+            "leader": "Hashirama Senju",
+            "village": "Konohagakure"
+        }
+    }
+]
