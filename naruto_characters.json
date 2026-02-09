@@ -6,7 +6,7 @@
         "age": 32,
         "active": true,
         "birthdate": "1990-10-10",
-        "image_url": "https://github.com/NabilHabrani/Naruto/blob/main/naruto_uzumaki.png?raw=true",
+        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/naruto.png",
         "position": "Hokage",
         "hobbies": ["Ramen eten", "Trainen", "Vrienden helpen"],
         "team": {
@@ -23,7 +23,7 @@
         "age": 32,
         "active": true,
         "birthdate": "1990-07-23",
-        "image_url": "https://github.com/NabilHabrani/Naruto/blob/main/sasuke_uchiha.png?raw=true",
+        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/sasuske.png",
         "position": "Jonin",
         "hobbies": ["Kracht zoeken", "Trainen", "Rache nemen"],
         "team": {
@@ -40,7 +40,7 @@
         "age": 32,
         "active": true,
         "birthdate": "1992-03-28",
-        "image_url": "https://github.com/NabilHabrani/Naruto/blob/main/sakura_haruno.png?raw=true",
+        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/sakura.png",
         "position": "Jonin",
         "hobbies": ["Medische ninjutsu", "Training", "Botanica"],
         "team": {
@@ -57,7 +57,7 @@
         "age": 48,
         "active": true,
         "birthdate": "1974-09-15",
-        "image_url": "https://github.com/NabilHabrani/Naruto/blob/main/kakashi_hatake.png?raw=true",
+        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/kakashi.png",
         "position": "Jonin",
         "hobbies": ["Lezen", "Training", "Koffie drinken"],
         "team": {
@@ -74,7 +74,7 @@
         "age": 40,
         "active": true,
         "birthdate": "1984-06-09",
-        "image_url": "https://github.com/NabilHabrani/Naruto/blob/main/itachi_uchiha.png?raw=true",
+        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/itachi.png",
         "position": "Actieken (ex-Jonin)",
         "hobbies": ["Piano spelen", "Reflectie", "Bescherming"],
         "team": {
@@ -91,7 +91,7 @@
         "age": 32,
         "active": true,
         "birthdate": "1992-12-27",
-        "image_url": "https://github.com/NabilHabrani/Naruto/blob/main/hinata_hyuga.png?raw=true",
+        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/hinata.png",
         "position": "Jonin",
         "hobbies": ["Trainen", "Familie", "Kokende kunst"],
         "team": {
@@ -108,7 +108,7 @@
         "age": 32,
         "active": true,
         "birthdate": "1992-09-22",
-        "image_url": "https://github.com/NabilHabrani/Naruto/blob/main/shikamaru_nara.png?raw=true",
+        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/shikamaru.png",
         "position": "Jonin",
         "hobbies": ["Strategie denken", "Schaak", "Sigaretten"],
         "team": {
@@ -125,7 +125,7 @@
         "age": 32,
         "active": true,
         "birthdate": "1992-01-19",
-        "image_url": "https://github.com/NabilHabrani/Naruto/blob/main/gaara.png?raw=true",
+        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/gaara.png",
         "position": "Kazekage",
         "hobbies": ["Zand manipulatie", "Bescherming", "Leiderschap"],
         "team": {
@@ -142,7 +142,7 @@
         "age": 32,
         "active": true,
         "birthdate": "1992-11-27",
-        "image_url": "https://github.com/NabilHabrani/Naruto/blob/main/rock_lee.png?raw=true",
+        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/rock%20lee.png",
         "position": "Jonin",
         "hobbies": ["Taijutsu training", "Hardlopen", "Vriendschap"],
         "team": {
@@ -159,7 +159,7 @@
         "age": 60,
         "active": false,
         "birthdate": "1966-11-15",
-        "image_url": "https://github.com/NabilHabrani/Naruto/blob/main/jiraiya.png?raw=true",
+        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/jiraya.png",
         "position": "Jonin (Emeritus)",
         "hobbies": ["Schrijven", "Onderzoek", "Trainen"],
         "team": {
