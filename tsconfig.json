@@ -4,13 +4,14 @@
     // File Layout
     // "rootDir": "./src",
     // "outDir": "./dist",
-    "resolveJsonModule": true,
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
-    "verbatimModuleSyntax": false,
-    "target": "esnext",
+    "module": "esnext",
+    "target": "es2020",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "verbatimModuleSyntax": true,
+    "resolveJsonModule": true,
     "types": [],
     // For nodejs:
     // "lib": ["esnext"],
@@ -33,7 +34,6 @@
     // Recommended Options
     "strict": true,
     "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
