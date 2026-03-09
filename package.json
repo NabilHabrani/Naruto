@@ -11,7 +11,10 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^25.3.5",
-    "@types/readline-sync": "^1.4.8"
+    "@types/readline-sync": "^1.4.8",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "readline-sync": "^1.4.10"
