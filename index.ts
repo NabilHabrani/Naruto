@@ -13,67 +13,61 @@ const menuItems: string[] = [
 let running: boolean = true;
 
 do {
-    console.log(" Welcome to the Naruto JSON data viewer!");
+    console.log("Welcome to the Naruto JSON data viewer!");
 
     let option: number = readline.keyInSelect(menuItems, "Please enter your choice:", { cancel: false });
 
     if (option === 0) {
-        // View all data - alleen namen en IDs
-        console.log("\n" + "ALLE KARAKTERS".padStart(35, "="));
-        console.log("=".repeat(50));
+        console.log("");
+        console.log("ALLE KARAKTERS");
+        console.log("");
 
         users.forEach(user => {
-            const activeStatus = user.active ? "✅" : "❌";
-            console.log(`- ${user.name} (ID: ${user.id}) ${activeStatus}`);
+            console.log(`- ${user.name} (ID: ${user.id})`);
         });
-        console.log("=".repeat(50) + "\n");
 
     } else if (option === 1) {
-        // Filter by ID
+        // ID filteren
         const searchId: number = readline.questionInt("Please enter the ID you want to filter by: ");
 
-        // Zoek naar de user met het opgegeven ID
         const foundUser = users.find(user => user.id === searchId);
 
         if (foundUser) {
-            //User gevonden - toon ALLE details
-            /*
-             console.log("\n" + "⭐".repeat(25));
-             console.log(`KARAKTER DETAILS: ${foundUser.name}`);
-             console.log("⭐".repeat(25));
-             */
 
-            console.log(` ID: ${foundUser.id}`);
-            console.log(` Naam: ${foundUser.name}`);
-            console.log(` Beschrijving: ${foundUser.description}`);
-            console.log(` Leeftijd: ${foundUser.age}`);
-            console.log(` Actief: ${foundUser.active ? "Ja" : "Nee"}`);
-            console.log(` Geboortedatum: ${foundUser.birthdate}`);
-            console.log(`  Afbeelding: ${foundUser.image_url}`);
-            console.log(`  Positie: ${foundUser.position}`);
-            console.log(` Hobbies: ${foundUser.hobbies.join(", ")}`);
+            console.log("");
+            console.log(`ID: ${foundUser.id}`);
+            console.log(`   Naam: ${foundUser.name}`);
+            console.log(`   Beschrijving: ${foundUser.description}`);
+            console.log(`   Leeftijd: ${foundUser.age}`);
+            console.log(`   Actief: ${foundUser.active ? "Ja" : "Nee"}`);
+            console.log(`   Geboortedatum: ${foundUser.birthdate}`);
+            console.log(`   Afbeelding: ${foundUser.image_url}`);
+            console.log(`   Positie: ${foundUser.position}`);
+            console.log(`   Hobbies: ${foundUser.hobbies.join(", ")}`);
+            console.log("");
 
-            console.log(` TEAM INFORMATIE:`);
+            console.log(`TEAM INFORMATIE:`);
             console.log(`   ID: ${foundUser.team.id}`);
             console.log(`   Naam: ${foundUser.team.name}`);
             console.log(`   Leider: ${foundUser.team.leader}`);
             console.log(`   Dorp: ${foundUser.team.village}`);
+            console.log("");
 
         } else {
-            // User niet gevonden
-            console.log(` Geen karakter gevonden met ID: ${searchId}`);
-            console.log(`Beschikbare IDs: ${users.map(u => u.id).sort((a, b) => a - b).join(', ')}`);
+            // verkeerde ID ingegeven
+            console.log(`Geen karakter gevonden met ID: ${searchId}`);
         }
 
     } else if (option === 2) {
         // Exit
-        console.log(" Arigato gozaimasu! Tot ziens!\n");
+        console.log("Arigato gozaimasu! Tot ziens!");
         running = false;
     }
 
-    // Pauze voor betere leesbaarheid (behalve bij exit)
     if (running && option !== 2) {
-        readline.question(" Druk op Enter om terug te keren naar het menu...");
+        readline.question("Druk op Enter om terug te keren naar het menu...");
     }
 
 } while (running);
+
+export { };
