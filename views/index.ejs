@@ -1,36 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/fonts.css">
-    <link rel="stylesheet" href="/public/css/reset.css">
-    <link rel="stylesheet" href="/public/css/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Naruto · Characters</title>
 </head>
 
 <body>
+
     <header>
         <nav>
             <div class="logo">
-                <img src="/public/images/logo.png" alt="" width="50">
-                <h1>Naruto</h1>
+                <img src="/images/logo.png" alt="logo" width="100">
             </div>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/views/characters.ejs">Characters</a></li>
+                <li><a href="/views/characters.ejs\">Characters</a></li>
                 <li><a href="/views/detail.ejs">Detail</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <form action="/" method="get" class=" search">
 
+    <main>
+
+        <form action="/" method="get" class="search">
+            <img src="\" alt="search" width="20">
+            <input type="text" id="search" name="s" class="searchBar" placeholder="Zoek naar karakters">
+            <button type="submit">Zoek</button>
         </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th><a href="?sort=naam">Naam</a></th>
+                    <th><a href="?sort=geboortedatum">Geboortedatum</a></th>
+                    <th>Hobbies</th>
+                    <th>Positie</th>
+                    <th>Beschrijving</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>
+                        <div class="names">
+                            <img src="/images/naruto.png" alt="Naruto">
+                            <h1>Naruto Uzumaki</h1>
+                        </div>
+                    </td>
+                    <td>10-10-1995</td>
+                    <td class="hobbies">
+                        <p>Ramen eten</p>
+                        <p>Trainen</p>
+                        <p>Streken uithalen</p>
+                    </td>
+                    <td>Hokage</td>
+                    <td>Een vrolijke ninja met een grote droom om de sterkste Hokage te worden.</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="names">
+                            <img src="/images/sasuske.png" alt="Sasuke">
+                            <h1>Sasuke Uchiha</h1>
+                        </div>
+                    </td>
+                    <td>23-07-1995</td>
+                    <td class="hobbies">
+                        <p>Trainen</p>
+                        <p>Mediteren</p>
+                    </td>
+                    <td>Shinobi</td>
+                    <td>Laatste overlevende van de Uchiha clan, meester van de Sharingan.</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="names">
+                            <img src="/images/sakura.png" alt="Sakura">
+                            <h1>Sakura Haruno</h1>
+                        </div>
+                    </td>
+                    <td>28-03-1995</td>
+                    <td class="hobbies">
+                        <p>Lezen</p>
+                        <p>Genezen</p>
+                        <p>Bloemen verzorgen</p>
+                    </td>
+                    <td>Medisch ninja</td>
+                    <td>Slim en sterk, een topklasse medische ninja met enorme kracht.</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="names">
+                            <img src="/images/hinata.png" alt="Hinata">
+                            <h1>Hinata Hyuga</h1>
+                        </div>
+                    </td>
+                    <td>27-12-1995</td>
+                    <td class="hobbies">
+                        <p>Bloemen drukken</p>
+                        <p>Koken</p>
+                        <p>Trainen</p>
+                    </td>
+                    <td>Shinobi</td>
+                    <td>Verlegen erfgenaam van de Hyuga clan, beheerst de Byakugan.</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="names">
+                            <img src="images/kakashi.png" alt="Kakashi">
+                            <h1>Kakashi Hatake</h1>
+                        </div>
+                    </td>
+                    <td>15-09-1985</td>
+                    <td class="hobbies">
+                        <p>Boeken lezen</p>
+                        <p>Te laat komen</p>
+                    </td>
+                    <td>Jonin</td>
+                    <td>De Copy Ninja, leraar van Team 7 en bekend om zijn ontspannen houding.</td>
+                </tr>
+
+            </tbody>
+        </table>
+
     </main>
 
-
+    <footer>
+    </footer>
 
 </body>
 
