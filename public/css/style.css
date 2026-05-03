@@ -72,7 +72,7 @@ nav ul a {
     font-family: var(--font-display, 'Bangers', sans-serif);
     display: block;
     padding: 0.7rem 0.9rem;
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: 500;
     color: var(--c-text);
     border-radius: 8px;
@@ -643,4 +643,41 @@ html, body {
     color: var(--ink-faded);
     margin-right: 6px;
 }
+
+.character-card-detail {
+    position: relative;
+    padding: 32px 28px 28px;
+    background-color: #f5e5c2;
+    background-image:
+        radial-gradient(ellipse at 10% 0%, rgba(150, 100, 40, 0.18) 0%, transparent 50%),
+        radial-gradient(ellipse at 100% 100%, rgba(150, 100, 40, 0.20) 0%, transparent 50%),
+        repeating-linear-gradient(
+            90deg,
+            rgba(120, 80, 30, 0.04) 0px,
+            rgba(120, 80, 30, 0.04) 1px,
+            transparent 1px,
+            transparent 5px
+        ),
+        linear-gradient(180deg, #f0dcb0 0%, #e6cb95 100%);
+    /* Torn-edge feel via custom border */
+    border: 2px solid var(--ink-faded);
+    border-radius: 4px;
+    box-shadow:
+        inset 0 0 30px rgba(120, 70, 20, 0.18),
+        inset 0 0 80px rgba(120, 70, 20, 0.10),
+        4px 6px 0 rgba(60, 35, 10, 0.15),
+        8px 14px 28px rgba(60, 35, 10, 0.30);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
+    width: 70%;
+    max-width: 800px;
+    
+}
+
+.card-detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
