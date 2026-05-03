@@ -35,8 +35,7 @@ header {
     flex: 0 0 240px;
     width: 240px;
     min-height: 100vh;
-    background: var(--c-surface);
-    border-right: 1px solid var(--c-border);
+    border-right: var(--c-text);
     padding: 1.75rem 1.25rem;
     position: sticky;
     top: 0;
@@ -53,25 +52,15 @@ nav {
 
 .logo {
     display: flex;
-    align-items: center;
-    gap: 0.7rem;
-    padding: 0.4rem 0.5rem 1.25rem;
-    border-bottom: 1px solid var(--c-border-light);
+    align-items: end;
 }
 
 .logo img {
-    width: 42px;
-    height: 42px;
+    width: 200px;
+    height: 200px;
     object-fit: contain;
 }
 
-.logo h1 {
-    font-family: var(--font-display, 'Bangers', sans-serif);
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-    color: var(--c-orange);
-    line-height: 1;
-}
 
 nav ul {
     display: flex;
@@ -80,13 +69,13 @@ nav ul {
 }
 
 nav ul a {
+    font-family: var(--font-display, 'Bangers', sans-serif);
     display: block;
     padding: 0.7rem 0.9rem;
-    font-size: 0.95rem;
+    font-size: 2rem;
     font-weight: 500;
-    color: var(--c-text-muted);
+    color: var(--c-text);
     border-radius: 8px;
-    transition: background-color var(--transition), color var(--transition);
 }
 
 nav ul a:hover {
@@ -103,6 +92,8 @@ main {
 
 /* SEARCH */
 .search {
+    
+    font-family: var(--font-display, 'Bangers', sans-serif);
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -143,9 +134,9 @@ main {
 .search button {
     flex-shrink: 0;
     padding: 0.55rem 1.2rem;
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    color: #fff;
+    color:white;
     background: var(--c-orange);
     border-radius: 8px;
     transition: background-color var(--transition), transform var(--transition);
@@ -223,7 +214,7 @@ tbody td {
 }
 
 .names h1 {
-    font-family: var(--font-body, system-ui, sans-serif);
+    font-family: 'Special Elite', serif;
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--c-text);
@@ -309,7 +300,10 @@ footer {
         white-space: nowrap;
     }
 }
- /* karakters*/
+ 
+
+
+/* karakters*/
  
 
 * {
@@ -336,120 +330,11 @@ html, body {
     min-height: 100%;
 }
 
-body {
-    font-family: 'Special Elite', 'Noto Serif JP', serif;
-    color: var(--ink-deep);
-    line-height: 1.6;
-    /* Aged paper background using layered radial + linear gradients */
-    background-color: var(--paper-base);
-    background-image:
-        radial-gradient(ellipse at 20% 10%, rgba(120, 80, 30, 0.18) 0%, transparent 55%),
-        radial-gradient(ellipse at 80% 90%, rgba(120, 80, 30, 0.22) 0%, transparent 55%),
-        radial-gradient(ellipse at 50% 50%, rgba(255, 230, 180, 0.4) 0%, transparent 70%),
-        repeating-linear-gradient(
-            0deg,
-            rgba(80, 50, 20, 0.04) 0px,
-            rgba(80, 50, 20, 0.04) 2px,
-            transparent 2px,
-            transparent 4px
-        ),
-        linear-gradient(135deg, var(--paper-light) 0%, var(--paper-base) 50%, var(--paper-dark) 100%);
-    background-attachment: fixed;
-    padding: 40px 24px 80px;
-    position: relative;
-}
 
-/* Subtle paper grain noise overlay */
-body::before {
-    content: \"\";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    background-image:
-        radial-gradient(circle at 12% 33%, rgba(60, 30, 10, 0.06) 0px, transparent 2px),
-        radial-gradient(circle at 78% 18%, rgba(60, 30, 10, 0.05) 0px, transparent 2px),
-        radial-gradient(circle at 45% 72%, rgba(60, 30, 10, 0.05) 0px, transparent 2px),
-        radial-gradient(circle at 88% 84%, rgba(60, 30, 10, 0.06) 0px, transparent 2px),
-        radial-gradient(circle at 22% 88%, rgba(60, 30, 10, 0.05) 0px, transparent 2px);
-    background-size: 220px 220px, 180px 180px, 260px 260px, 200px 200px, 240px 240px;
-    z-index: 0;
-}
 
 /* ============== HEADER ============== */
-.scroll-header {
-    max-width: 900px;
-    margin: 20px auto 60px;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-    padding: 30px 20px;
-}
 
-.seal-top {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 80px;
-    height: 80px;
-    border: 3px solid var(--seal-red);
-    background-color: var(--seal-red);
-    color: var(--paper-light);
-    font-family: 'Noto Serif JP', serif;
-    font-size: 42px;
-    font-weight: 700;
-    border-radius: 6px;
-    transform: rotate(-6deg);
-    box-shadow:
-        2px 4px 0 rgba(122, 29, 16, 0.3),
-        inset 0 0 8px rgba(255, 220, 200, 0.2);
-    margin-bottom: 24px;
-    letter-spacing: 0;
-}
 
-.title {
-    font-family: 'Cinzel', 'Noto Serif JP', serif;
-    font-size: clamp(2.2rem, 5vw, 3.6rem);
-    font-weight: 700;
-    color: var(--ink-deep);
-    letter-spacing: 0.08em;
-    margin-bottom: 14px;
-    text-shadow: 1px 1px 0 var(--paper-light), 2px 2px 4px var(--shadow-warm);
-}
-
-.subtitle {
-    font-family: 'Special Elite', serif;
-    font-size: 1.05rem;
-    color: var(--ink-soft);
-    font-style: italic;
-    margin-bottom: 24px;
-}
-
-.header-divider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    margin: 0 auto;
-    max-width: 500px;
-}
-
-.divider-line {
-    flex: 1;
-    height: 2px;
-    background: linear-gradient(
-        90deg,
-        transparent 0%,
-        var(--ink-faded) 30%,
-        var(--ink-faded) 70%,
-        transparent 100%
-    );
-}
-
-.divider-symbol {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 1.6rem;
-    color: var(--seal-red);
-}
 
 /* ============== GRID ============== */
 .characters-grid {
@@ -532,27 +417,6 @@ body::before {
     letter-spacing: 0.15em;
 }
 
-.status-stamp {
-    display: inline-block;
-    padding: 4px 12px;
-    border: 2px solid var(--seal-red);
-    color: var(--seal-red);
-    font-family: 'Cinzel', serif;
-    font-weight: 700;
-    font-size: 0.72rem;
-    letter-spacing: 0.18em;
-    border-radius: 3px;
-    transform: rotate(3deg);
-    background-color: rgba(165, 42, 26, 0.06);
-    box-shadow: inset 0 0 4px rgba(165, 42, 26, 0.2);
-}
-
-.status-stamp.inactive {
-    color: var(--ink-faded);
-    border-color: var(--ink-faded);
-    background-color: rgba(75, 58, 34, 0.06);
-    transform: rotate(-3deg);
-}
 
 /* Portrait frame */
 .portrait-frame {
@@ -580,25 +444,6 @@ body::before {
     filter: sepia(0.15) saturate(0.95) contrast(1.05);
 }
 
-.portrait-kanji {
-    position: absolute;
-    bottom: 6px;
-    right: 6px;
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--seal-red);
-    color: var(--paper-light);
-    font-family: 'Noto Serif JP', serif;
-    font-size: 1.3rem;
-    font-weight: 700;
-    border-radius: 4px;
-    transform: rotate(-8deg);
-    border: 2px solid var(--paper-light);
-    box-shadow: 1px 2px 4px rgba(0,0,0,0.3);
-}
 
 /* Name + Position */
 .character-name {
@@ -636,6 +481,57 @@ body::before {
 }
 
 /* Info grid */
+
+/* ============== FOOTER ============== */
+
+/* ============== RESPONSIVE ============== */
+@media (max-width: 600px) {
+    body {
+        padding: 24px 14px 60px;
+    }
+
+    .scroll-header {
+        margin-bottom: 40px;
+    }
+
+    .characters-grid {
+        gap: 28px;
+        grid-template-columns: 1fr;
+    }
+
+    .character-card {
+        padding: 26px 20px 22px;
+    }
+
+    .portrait-frame {
+        width: 170px;
+        height: 170px;
+    }
+
+    .character-name {
+        font-size: 1.4rem;
+    }
+
+    .card-header {
+        padding: 0 8px;
+    }
+}
+
+/* ============== PRINT (echte ninja rol) ============== */
+@media print {
+    body {
+        background: #f5e5c2;
+        padding: 0;
+    }
+    .character-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid var(--ink-faded);
+    }
+}
+
+
+/* DETAIL PAGINA*/
 .info-grid {
     background-color: rgba(120, 70, 20, 0.08);
     border: 1px solid var(--ink-faded);
@@ -748,74 +644,3 @@ body::before {
     margin-right: 6px;
 }
 
-/* ============== FOOTER ============== */
-.scroll-footer {
-    max-width: 900px;
-    margin: 80px auto 0;
-    text-align: center;
-    padding: 30px 20px;
-    position: relative;
-    z-index: 1;
-}
-
-.footer-text {
-    font-family: 'Cinzel', serif;
-    font-size: 1.1rem;
-    color: var(--ink-soft);
-    letter-spacing: 0.2em;
-    margin: 20px 0 8px;
-    text-transform: uppercase;
-}
-
-.footer-sub {
-    font-family: 'Special Elite', serif;
-    font-size: 0.85rem;
-    color: var(--ink-faded);
-    font-style: italic;
-}
-
-/* ============== RESPONSIVE ============== */
-@media (max-width: 600px) {
-    body {
-        padding: 24px 14px 60px;
-    }
-
-    .scroll-header {
-        margin-bottom: 40px;
-    }
-
-    .characters-grid {
-        gap: 28px;
-        grid-template-columns: 1fr;
-    }
-
-    .character-card {
-        padding: 26px 20px 22px;
-    }
-
-    .portrait-frame {
-        width: 170px;
-        height: 170px;
-    }
-
-    .character-name {
-        font-size: 1.4rem;
-    }
-
-    .card-header {
-        padding: 0 8px;
-    }
-}
-
-/* ============== PRINT (echte ninja rol) ============== */
-@media print {
-    body {
-        background: #f5e5c2;
-        padding: 0;
-    }
-    .character-card {
-        break-inside: avoid;
-        box-shadow: none;
-        border: 1px solid var(--ink-faded);
-    }
-}
