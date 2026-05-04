@@ -1,1 +1,2 @@
 # Naruto
+# mongodb+srv://nabilhabrani321_db_user:xNaiWpluSCnhvh2T@cluster0.l44fadi.mongodb.net/
