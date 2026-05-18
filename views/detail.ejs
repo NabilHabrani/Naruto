@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/css/fonts.css">
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Document</title>
+    <title><%= character.name %> - Naruto</title>
 </head>
 <body>
         <header>
@@ -24,59 +24,59 @@
     
     <main class="card-detail">
 
-
-
-            
-    
-    
-        <article class="character-card-detail">
+         <article class="character-card-detail">
             <div class="card-corner top-left"></div>
             <div class="card-corner top-right"></div>
             <div class="card-corner bottom-left"></div>
             <div class="card-corner bottom-right"></div>
 
             <div class="card-header">
-                <span class="card-id">№ 10</span>
+                <span class="card-id">№ <%= character.id.toString().padStart(2, '0') %></span>
             </div>
 
             <div class="portrait-frame">
-                <img src="images/jiraya.png" alt="Jiraiya" class="portrait" />
+                <img src="<%= character.image_url %>" alt="<%= character.name %>" class="portrait" />
             </div>
 
-            <h2 class="character-name">Jiraiya</h2>
-            <p class="character-position">Jonin (Emeritus)</p>
+            <h2 class="character-name"><%= character.name %></h2>
+            <p class="character-position"><%= character.position %></p>
 
             <p class="character-description">
-                Jiraiya is een van de Legendarische Drie Shinobi van Konohagakure en de mentor van Naruto. Hij is beroemd om zijn krachtige technieken en zijn gulheid.
+                <%= character.description %>
             </p>
 
             <div class="info-grid">
                 <div class="info-row">
                     <span class="info-label">Leeftijd</span>
-                    <span class="info-value">60</span>
+                    <span class="info-value"><%= character.age %></span>
                 </div>
                 <div class="info-row">
                     <span class="info-label">Geboortedatum</span>
-                    <span class="info-value">15 november 1966</span>
+                    <span class="info-value"><%= character.birthdate %></span>
                 </div>
             </div>
 
             <div class="hobbies-section">
                 <h3 class="section-heading">Hobby's</h3>
                 <ul class="hobbies-list">
-                    <li>Schrijven</li>
-                    <li>Onderzoek</li>
-                    <li>Trainen</li>
+                    <% for(let hobby of character.hobbies) { %>
+                        <li><%= hobby %></li>
+                    <% } %>
                 </ul>
             </div>
 
             <div class="team-section">
                 <h3 class="section-heading">Team</h3>
-                <p class="team-name">Legendarische Drie</p>
-                <p class="team-detail"><span>Leider:</span> Hashirama Senju</p>
-                <p class="team-detail"><span>Dorp:</span> Konohagakure</p>
+                <p class="team-name"><%= character.team.name %></p>
+                <p class="team-detail"><span>Dorp:</span> <%= character.team.village %></p>
             </div>
         </article>
+
+
+
+            
+    
+    
     
     </main>
 

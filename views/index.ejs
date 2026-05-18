@@ -27,109 +27,47 @@
 
     <main>
 
-        <form action="/" method="get" class="search">
-            <img src="/images/search.png" alt="" width="20">
-            <input type="text" id="search" name="s" class="searchBar" placeholder="Zoek naar karakters">
-            <button type="submit">Zoek</button>
-        </form>
+<form action="/" method="get" class="search">
+    <img src="/images/search.png" alt=""><input type="text" name="s" value="<%= searchQuery %>" placeholder="Zoek op naam">
+    <input type="hidden" name="sort" value="<%= sortField %>">
+    <input type="hidden" name="dir" value="<%= sortDirection %>">
+    <button type="submit">Zoek</button>
+</form>
 
-        <table>
-            <thead>
-                <tr>
-                    <th><a href="?sort=naam">Naam</a></th>
-                    <th><a href="?sort=geboortedatum">Geboortedatum</a></th>
-                    <th>Hobbies</th>
-                    <th>Positie</th>
-                    <th>Beschrijving</th>
-                </tr>
-            </thead>
-            <tbody>
+    <table>
+    <thead>
+        <tr>
+            <th><a href="/?sort=name&dir=<%= sortField === "name" && sortDirection === "asc" ? "desc" : "asc" %>&s=<%= searchQuery %>">Naam</a></th>
+            <th><a href="/?sort=birthdate&dir=<%= sortField === "birthdate" && sortDirection === "asc" ? "desc" : "asc" %>&s=<%= searchQuery %>">Geboortedatum</a></th>
+            <th>Hobbies</th>
+            <th>Positie</th>
+            <th>Beschrijving</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for(let character of characters) { %>
+        <tr>
+            <td>
+                <div class="names">
+                    <a href="/characters/<%= character.id %>">
+                        <img src="/images/<%= character.image_url %>" alt="<%= character.name %>">
+                        <h1><%= character.name %></h1>
+                    </a>
+                </div>
+            </td>
+            <td><%= character.birthdate %></td>
+            <td class="hobbies">
+                <% for(let hobby of character.hobbies) { %>
+                    <p><%= hobby %></p>
+                <% } %>
+            </td>
+            <td><%= character.position %></td>
+            <td><%= character.description %></td>
+        </tr>
+        <% } %>
+    </tbody>
+</table>
 
-                <tr>
-                    <td>
-                        <div class="names">
-                            <img src="/images/naruto.png" alt="Naruto">
-                            <h1>Naruto Uzumaki</h1>
-                        </div>
-                    </td>
-                    <td>10-10-1995</td>
-                    <td class="hobbies">
-                        <p>Ramen eten</p>
-                        <p>Trainen</p>
-                        <p>Streken uithalen</p>
-                    </td>
-                    <td>Hokage</td>
-                    <td>Een vrolijke ninja met een grote droom om de sterkste Hokage te worden.</td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <div class="names">
-                            <img src="/images/sasuske.png" alt="Sasuke">
-                            <h1>Sasuke Uchiha</h1>
-                        </div>
-                    </td>
-                    <td>23-07-1995</td>
-                    <td class="hobbies">
-                        <p>Trainen</p>
-                        <p>Mediteren</p>
-                    </td>
-                    <td>Shinobi</td>
-                    <td>Laatste overlevende van de Uchiha clan, meester van de Sharingan.</td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <div class="names">
-                            <img src="/images/sakura.png" alt="Sakura">
-                            <h1>Sakura Haruno</h1>
-                        </div>
-                    </td>
-                    <td>28-03-1995</td>
-                    <td class="hobbies">
-                        <p>Lezen</p>
-                        <p>Genezen</p>
-                        <p>Bloemen verzorgen</p>
-                    </td>
-                    <td>Medisch ninja</td>
-                    <td>Slim en sterk, een topklasse medische ninja met enorme kracht.</td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <div class="names">
-                            <img src="/images/hinata.png" alt="Hinata">
-                            <h1>Hinata Hyuga</h1>
-                        </div>
-                    </td>
-                    <td>27-12-1995</td>
-                    <td class="hobbies">
-                        <p>Bloemen drukken</p>
-                        <p>Koken</p>
-                        <p>Trainen</p>
-                    </td>
-                    <td>Shinobi</td>
-                    <td>Verlegen erfgenaam van de Hyuga clan, beheerst de Byakugan.</td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <div class="names">
-                            <img src="images/kakashi.png" alt="Kakashi">
-                            <h1>Kakashi Hatake</h1>
-                        </div>
-                    </td>
-                    <td>15-09-1985</td>
-                    <td class="hobbies">
-                        <p>Boeken lezen</p>
-                        <p>Te laat komen</p>
-                    </td>
-                    <td>Jonin</td>
-                    <td>De Copy Ninja, leraar van Team 7 en bekend om zijn ontspannen houding.</td>
-                </tr>
-
-            </tbody>
-        </table>
 
     </main>
 

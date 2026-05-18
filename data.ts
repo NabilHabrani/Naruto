@@ -64,11 +64,11 @@ export async function searchAndSortCharacters(sortField: string, sortDirection: 
     }
 }
 
-export async function getCharacterById(id: string) {
+export async function getCharacterById(id: number) {
     return await collectionCharacters.findOne({ id: id });
 }
 
-export async function updateCharacter(id: string, updatedData: Characters) {
+export async function updateCharacter(id: number, updatedData: Characters) {
     try {
         await collectionCharacters.updateOne({ id: id }, { $set: updatedData });
     } catch (error) {
@@ -90,7 +90,7 @@ export const sortDirections = [
     { value: 'desc', text: 'Descending' }
 ];
 
-//login
+/*
 async function createDefaultUsers() {
     try {
         const users: User[] = await userCollection.find({}).toArray();
@@ -104,7 +104,7 @@ async function createDefaultUsers() {
         console.error("Error creating default users:", error);
     }
 }
-
+/*
 export async function registerUser(username: string | undefined, password: string | undefined, role: "ADMIN" | "USER") {
     if (username === undefined || password === undefined) {
         throw new Error("ADMIN_EMAIL and ADMIN_PASSWORD must be set in environment");
@@ -116,6 +116,9 @@ export async function registerUser(username: string | undefined, password: strin
         role: role
     });
 }
+    */
+    
+    
 
 export async function loginUser(username: string, password: string) {
     if (username === "" || password === "") {
@@ -136,7 +139,6 @@ export async function loginUser(username: string, password: string) {
 export async function connect() {
     try {
         await client.connect();
-        await createDefaultUsers();
         await CharacterApi();
         console.log("Connected to database");
         process.on("SIGINT", exit);
@@ -144,6 +146,7 @@ export async function connect() {
         console.error(error);
     }
 }
+
 
 
 
