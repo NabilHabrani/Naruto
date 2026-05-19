@@ -1,0 +1,47 @@
+<%- include("partials/header") %>
+
+<main>
+    <section class="edit-section">
+        <article class="edit-card">
+            <form action="/characters/<%= character.id %>/edit" method="post" class="edit-form">
+                <h1>Bewerk <%= character.name %></h1>
+
+                <label for="name">Naam:
+                    <input type="text" id="name" name="name" value="<%= character.name %>">
+                </label>
+
+                <label for="position">Positie (select):
+                    <select id="position" name="position">
+                        <option value="Hokage" <% if (character.position === 'Hokage') { %>selected<% } %>>Hokage</option>
+                        <option value="Jonin" <% if (character.position === 'Jonin') { %>selected<% } %>>Jonin</option>
+                        <option value="Kazekage" <% if (character.position === 'Kazekage') { %>selected<% } %>>Kazekage</option>
+                        <option value="Jonin (Emeritus)" <% if (character.position === 'Jonin (Emeritus)') { %>selected<% } %>>Jonin (Emeritus)</option>
+                        <option value="Akatsuki (ex-Jonin)" <% if (character.position === 'Akatsuki (ex-Jonin)') { %>selected<% } %>>Akatsuki (ex-Jonin)</option>
+                    </select>
+                </label>
+
+                <label for="age">Leeftijd:
+                    <input type="number" id="age" name="age" value="<%= character.age %>">
+                </label>
+
+                <label for="birthdate">Geboortedatum:
+                    <input type="date" id="birthdate" name="birthdate" value="<%= character.birthdate %>">
+                </label>
+
+                <label for="description">Beschrijving:
+                    <textarea id="description" name="description" rows="4"><%= character.description %></textarea>
+                </label>
+
+                <label for="hobbies">Hobbies (komma gescheiden):
+                    <input type="text" id="hobbies" name="hobbies" value="<%= character.hobbies.join(', ') %>">
+                </label>
+
+
+                <button type="submit">Opslaan</button>
+                <a href="/characters/<%= character.id %>">Annuleren</a>
+            </form>
+        </article>
+    </section>
+</main>
+
+<%- include("partials/footer") %>

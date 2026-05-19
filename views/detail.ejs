@@ -1,27 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/fonts.css">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <title><%= character.name %> - Naruto</title>
-</head>
-<body>
-        <header>
-        <nav>
-            <div class="logo">
-                <img src="/images/logo2.png" alt="logo" width="100">
-            </div>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/characters">Characters</a></li>
-                <li><a href="/detail">Detail</a></li>
-            </ul>
-        </nav>
-    </header>
-    
+<%- include("partials/header") %>    
     <main class="card-detail">
 
          <article class="character-card-detail">
@@ -70,6 +47,16 @@
                 <p class="team-name"><%= character.team.name %></p>
                 <p class="team-detail"><span>Dorp:</span> <%= character.team.village %></p>
             </div>
+
+            <button class="edit-detail">
+                <a href="/characters/<%= character.id %>/edit" class="edit-button">Bewerk</a>
+            </button>
+
+
+          
+
+
+
         </article>
 
 
@@ -80,5 +67,5 @@
     
     </main>
 
-</body>
-</html>
+    <%- include("partials/footer") %>
+

@@ -1,6 +1,6 @@
 import express from "express";
 import ejs from "ejs";
-import { getCharacters, searchAndSortCharacters, getCharacterById, connect } from "./data";
+import { getCharacters, searchAndSortCharacters, getCharacterById, connect, updateCharacter } from "./data";
 
 
 const app = express();
@@ -60,6 +60,43 @@ app.get("/characters/:id", async (req, res) => {
 app.get("/detail",(req,res)=>{
     res.render("detail");
 })
+
+app.get("/characters/:id/edit", async (req, res) => {
+    let id = parseInt(req.params.id);
+    let character = await getCharacterById(id);
+
+    if (character) {
+        res.render("edit", { character: character });
+    } else {
+        res.status(404).send("Character not found");
+    }
+});
+
+
+app.post("/characters/:id/edit", async (req, res) => {
+    let id = parseInt(req.params.id);
+    
+    let updatedCharacter = {
+        id: id,
+        name: req.body.name,
+        description: req.body.description,
+        age: parseInt(req.body.age),
+        active: req.body.active === "true",
+        birthdate: req.body.birthdate,
+        image_url: req.body.image_url,
+        position: req.body.position,
+        hobbies: req.body.hobbies ? req.body.hobbies.split(',') : [],
+        team: {
+            id: parseInt(req.body.teamId),
+            name: req.body.teamName,
+            leader: req.body.teamLeader,
+            village: req.body.teamVillage
+        }
+    };
+    
+    await updateCharacter(id, updatedCharacter);
+    res.redirect("/characters/" + id);
+});
 
 
 app.listen(app.get("port"), () =>

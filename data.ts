@@ -38,6 +38,8 @@ async function CharacterApi() {
         console.log("database is leeg")
         const response = await fetch("https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/naruto_characters.json");
         const Characters: Characters[] = await response.json();
+        
+    
         await collectionCharacters.insertMany(Characters);
 
     }

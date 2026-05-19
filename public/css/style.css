@@ -680,4 +680,193 @@ html, body {
     align-items: center;
 }
 
+.edit-detail {
+    margin-top: 20px;
+    text-align: center;
+}
 
+.edit-button {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    padding: 8px 24px;
+    background-color: var(--konoha-orange);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.edit-button:hover {
+    background-color: #e56a0a;
+    transform: scale(1.05);
+}
+
+/* edit*/
+
+/* Edit Section - zelfde stijl als detail pagina */
+.edit-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.edit-card {
+    position: relative;
+    padding: 32px 28px 28px;
+    background-color: #f5e5c2;
+    background-image:
+        radial-gradient(ellipse at 10% 0%, rgba(150, 100, 40, 0.18) 0%, transparent 50%),
+        radial-gradient(ellipse at 100% 100%, rgba(150, 100, 40, 0.20) 0%, transparent 50%),
+        repeating-linear-gradient(
+            90deg,
+            rgba(120, 80, 30, 0.04) 0px,
+            rgba(120, 80, 30, 0.04) 1px,
+            transparent 1px,
+            transparent 5px
+        ),
+        linear-gradient(180deg, #f0dcb0 0%, #e6cb95 100%);
+    border: 2px solid var(--ink-faded);
+    border-radius: 4px;
+    box-shadow:
+        inset 0 0 30px rgba(120, 70, 20, 0.18),
+        inset 0 0 80px rgba(120, 70, 20, 0.10),
+        4px 6px 0 rgba(60, 35, 10, 0.15),
+        8px 14px 28px rgba(60, 35, 10, 0.30);
+    width: 70%;
+    max-width: 800px;
+}
+
+.edit-card h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--seal-red);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--konoha-orange);
+    position: relative;
+}
+
+.edit-card h1::after {
+    content: "✦";
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--konoha-orange);
+    background-color: #f5e5c2;
+    padding: 0 12px;
+    font-size: 1rem;
+}
+
+/* Form styling */
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.edit-form label {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    color: var(--ink-faded);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.edit-form input,
+.edit-form select,
+.edit-form textarea {
+    font-family: 'Special Elite', serif;
+    background-color: rgba(245, 229, 194, 0.8);
+    border: 1px solid var(--ink-faded);
+    border-radius: 3px;
+    padding: 10px 12px;
+    font-size: 0.9rem;
+    color: var(--ink-deep);
+    transition: all 0.2s ease;
+}
+
+.edit-form input:focus,
+.edit-form select:focus,
+.edit-form textarea:focus {
+    outline: none;
+    border-color: var(--konoha-orange);
+    box-shadow: 0 0 0 2px rgba(217, 122, 26, 0.2);
+    background-color: #fff5e6;
+}
+
+.edit-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Buttons */
+.edit-form button,
+.edit-form a {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.8rem;
+    padding: 10px 28px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.edit-form button {
+    background-color: var(--konoha-orange);
+    color: #fff;
+    border: none;
+    box-shadow: 0 2px 4px rgba(60, 35, 10, 0.2);
+}
+
+.edit-form button:hover {
+    background-color: #e56a0a;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(60, 35, 10, 0.25);
+}
+
+.edit-form a {
+    background-color: rgba(75, 58, 34, 0.2);
+    color: var(--ink-faded);
+    border: 1px solid var(--ink-faded);
+}
+
+.edit-form a:hover {
+    background-color: rgba(75, 58, 34, 0.35);
+    transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .edit-card {
+        width: 90%;
+        padding: 20px 18px;
+    }
+    
+    .edit-card h1 {
+        font-size: 1.2rem;
+    }
+    
+    .edit-form button,
+    .edit-form a {
+        width: 100%;
+    }
+}
