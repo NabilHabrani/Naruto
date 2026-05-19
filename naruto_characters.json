@@ -6,9 +6,13 @@
         "age": 32,
         "active": true,
         "birthdate": "1990-10-10",
-        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/naruto.png",
+        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/public/images/naruto.png",
         "position": "Hokage",
-        "hobbies": ["Ramen eten", "Trainen", "Vrienden helpen"],
+        "hobbies": [
+            "Ramen eten",
+            "Trainen",
+            "Vrienden helpen"
+        ],
         "team": {
             "id": 1,
             "name": "Team 7",
@@ -23,9 +27,13 @@
         "age": 32,
         "active": true,
         "birthdate": "1990-07-23",
-        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/sasuske.png",
+        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/public/images/sasuke.png",
         "position": "Jonin",
-        "hobbies": ["Kracht zoeken", "Trainen", "Rache nemen"],
+        "hobbies": [
+            "Kracht zoeken",
+            "Trainen",
+            "Rache nemen"
+        ],
         "team": {
             "id": 1,
             "name": "Team 7",
@@ -40,9 +48,13 @@
         "age": 32,
         "active": true,
         "birthdate": "1992-03-28",
-        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/sakura.png",
+        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/public/images/sakura.png",
         "position": "Jonin",
-        "hobbies": ["Medische ninjutsu", "Training", "Botanica"],
+        "hobbies": [
+            "Medische ninjutsu",
+            "Training",
+            "Botanica"
+        ],
         "team": {
             "id": 1,
             "name": "Team 7",
@@ -57,9 +69,13 @@
         "age": 48,
         "active": true,
         "birthdate": "1974-09-15",
-        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/kakashi.png",
+        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/public/images/kakashi.png",
         "position": "Jonin",
-        "hobbies": ["Lezen", "Training", "Koffie drinken"],
+        "hobbies": [
+            "Lezen",
+            "Training",
+            "Koffie drinken"
+        ],
         "team": {
             "id": 1,
             "name": "Team 7",
@@ -74,9 +90,13 @@
         "age": 40,
         "active": true,
         "birthdate": "1984-06-09",
-        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/itachi.png",
+        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/public/images/itachi.png",
         "position": "Actieken (ex-Jonin)",
-        "hobbies": ["Piano spelen", "Reflectie", "Bescherming"],
+        "hobbies": [
+            "Piano spelen",
+            "Reflectie",
+            "Bescherming"
+        ],
         "team": {
             "id": 2,
             "name": "Actieken",
@@ -91,9 +111,13 @@
         "age": 32,
         "active": true,
         "birthdate": "1992-12-27",
-        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/hinata.png",
+        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/public/images/hinata.png",
         "position": "Jonin",
-        "hobbies": ["Trainen", "Familie", "Kokende kunst"],
+        "hobbies": [
+            "Trainen",
+            "Familie",
+            "Kokende kunst"
+        ],
         "team": {
             "id": 3,
             "name": "Team 8",
@@ -108,9 +132,13 @@
         "age": 32,
         "active": true,
         "birthdate": "1992-09-22",
-        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/shikamaru.png",
+        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/public/images/shikamaru.png",
         "position": "Jonin",
-        "hobbies": ["Strategie denken", "Schaak", "Sigaretten"],
+        "hobbies": [
+            "Strategie denken",
+            "Schaak",
+            "Sigaretten"
+        ],
         "team": {
             "id": 4,
             "name": "Team 10",
@@ -125,9 +153,13 @@
         "age": 32,
         "active": true,
         "birthdate": "1992-01-19",
-        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/gaara.png",
+        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/public/images/gaara.png",
         "position": "Kazekage",
-        "hobbies": ["Zand manipulatie", "Bescherming", "Leiderschap"],
+        "hobbies": [
+            "Zand manipulatie",
+            "Bescherming",
+            "Leiderschap"
+        ],
         "team": {
             "id": 5,
             "name": "Sunagakure",
@@ -142,9 +174,13 @@
         "age": 32,
         "active": true,
         "birthdate": "1992-11-27",
-        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/rock%20lee.png",
+        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/public/images/rock%20lee.png",
         "position": "Jonin",
-        "hobbies": ["Taijutsu training", "Hardlopen", "Vriendschap"],
+        "hobbies": [
+            "Taijutsu training",
+            "Hardlopen",
+            "Vriendschap"
+        ],
         "team": {
             "id": 3,
             "name": "Team 8",
@@ -159,9 +195,13 @@
         "age": 60,
         "active": false,
         "birthdate": "1966-11-15",
-        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/jiraya.png",
+        "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/public/images/jiraya.png",
         "position": "Jonin (Emeritus)",
-        "hobbies": ["Schrijven", "Onderzoek", "Trainen"],
+        "hobbies": [
+            "Schrijven",
+            "Onderzoek",
+            "Trainen"
+        ],
         "team": {
             "id": 6,
             "name": "Legendarische Drie",
