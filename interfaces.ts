@@ -25,6 +25,12 @@ export interface Characters {
 export interface User {
     _id?: ObjectId;
     username: string;
-    password: string;
+    password?: string;
     role: "ADMIN" | "USER";
+}
+
+
+export interface FlashMessage {
+    type: "error" | "success"
+    message: string;
 }

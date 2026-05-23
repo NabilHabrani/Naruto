@@ -137,9 +137,9 @@ export async function registerUser(username: string | undefined, password: strin
 
 export async function loginUser(username: string, password: string) {
     if (username === "" || password === "") {
-        throw new Error("Email and password required");
+        throw new Error("Username and password required");
     }
-    let user: User | null = await userCollection.findOne<User>({ username: username });
+    let user = await userCollection.findOne<User>({ username: username });
     if (user) {
         if (await bcrypt.compare(password, user.password!)) {
             return user;
@@ -150,7 +150,6 @@ export async function loginUser(username: string, password: string) {
         throw new Error("User not found");
     }
 }
-
 
 
 

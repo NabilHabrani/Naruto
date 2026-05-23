@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 import session, { MemoryStore } from "express-session";
-import {User} from "../interfaces"
+import {FlashMessage, User} from "../interfaces"
 import MongoStore from "connect-mongo";
 import { uri } from "../data";
 
@@ -12,16 +12,15 @@ const mongoStore = MongoStore.create({
     collectionName: "sessions"
 });
 
-
+export interface SessionData {
+    user?: User;
+    message?: FlashMessage;
+}
 
 
 declare module 'express-session' {
     export interface SessionData {
-        user?: {
-            _id?: string;
-            username: string;
-            role: "ADMIN" | "USER";
-        };
+        user?: User;
     }
 }
 
