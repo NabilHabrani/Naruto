@@ -6,7 +6,7 @@ import type { Characters, User } from "./interfaces";
 
 dotenv.config();
 
-
+const saltRounds : number = 10;
 export const uri = process.env.URI || "mongodb+srv://nabilhabrani321_db_user:xNaiWpluSCnhvh2T@cluster0.l44fadi.mongodb.net/";
 const client = new MongoClient(uri);
 
@@ -22,6 +22,20 @@ async function exit() {
     }
     process.exit(0);
 }
+
+export async function connect() {
+    try {
+        await client.connect();
+        await CharacterApi();
+        await createDefaultUsers();
+        console.log("Connected to database");
+        process.on("SIGINT", exit);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+
 
 // karakters
 
@@ -92,34 +106,33 @@ export const sortDirections = [
     { value: 'desc', text: 'Descending' }
 ];
 
-/*
-async function createDefaultUsers() {
-    try {
-        const users: User[] = await userCollection.find({}).toArray();
-        if (users.length == 0) {
-            await registerUser("admin", "admin123", "ADMIN");
-            await registerUser("user", "user123", "USER");
-            console.log("Default users created successfully.");
-        }
 
-    } catch (error) {
-        console.error("Error creating default users:", error);
+async function createDefaultUsers() {
+    if (await userCollection.countDocuments() > 0) {
+        return;
     }
+    
+    // Admin user
+    let adminUsername: string = process.env.ADMIN_USERNAME ?? "admin";
+    let adminPassword: string = process.env.ADMIN_PASSWORD ?? "admin123";
+    
+    await userCollection.insertOne({
+        username: adminUsername,
+        password: await bcrypt.hash(adminPassword, saltRounds),
+        role: "ADMIN"
+    });
+    
+    
+    console.log("Default users created");
 }
-/*
 export async function registerUser(username: string | undefined, password: string | undefined, role: "ADMIN" | "USER") {
     if (username === undefined || password === undefined) {
         throw new Error("ADMIN_EMAIL and ADMIN_PASSWORD must be set in environment");
     }
 
-    await userCollection.insertOne({
-        username: username,
-        password: await bcrypt.hash(password, saltRounds),
-        role: role
-    });
-}
-    */
+
     
+}
     
 
 export async function loginUser(username: string, password: string) {
@@ -135,17 +148,6 @@ export async function loginUser(username: string, password: string) {
         }
     } else {
         throw new Error("User not found");
-    }
-}
-
-export async function connect() {
-    try {
-        await client.connect();
-        await CharacterApi();
-        console.log("Connected to database");
-        process.on("SIGINT", exit);
-    } catch (error) {
-        console.error(error);
     }
 }
 

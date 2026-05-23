@@ -1,10 +1,11 @@
 import express from "express";
 import ejs from "ejs";
 import { getCharacters, searchAndSortCharacters, getCharacterById, connect, updateCharacter } from "./data";
+import session from "./middleware/session";
 
 
 const app = express();
-
+app.use(session);
 
 app.set("view engine", "ejs"); 
 app.set("port", 3000);
@@ -99,6 +100,16 @@ app.post("/characters/:id/edit", async (req, res) => {
 });
 
 
-app.listen(app.get("port"), () =>
-  console.log("[server] http://localhost:" + app.get("port"))
-);
+app.get("/login", (req, res) => {
+    res.render("login");
+});
+
+app.listen(app.get("port"), async() => {
+    try {
+        await connect();
+        console.log("Server started on http://localhost:" + app.get('port'));
+    } catch (e) {
+        console.log(e);
+        process.exit(1); 
+    }
+});
