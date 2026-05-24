@@ -1,3 +1,3 @@
 Project Naruto - Nabil Habrani
 
-link: 
+link: https://narutoapp.onrender.com/
