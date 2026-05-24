@@ -1,10 +1,10 @@
 import dotenv from "dotenv";
 dotenv.config();
-import session, { MemoryStore } from "express-session";
-import {FlashMessage, User} from "../interfaces"
+
+import session from "express-session";
 import MongoStore from "connect-mongo";
 import { uri } from "../data";
-
+import { FlashMessage } from "../interfaces";
 
 const mongoStore = MongoStore.create({
     mongoUrl: uri,
@@ -12,24 +12,24 @@ const mongoStore = MongoStore.create({
     collectionName: "sessions"
 });
 
-export interface SessionData {
-    user?: User;
-    message?: FlashMessage;
-}
-
-
 declare module 'express-session' {
     export interface SessionData {
-        user?: User;
+        user?: {
+            _id?: string;
+            username: string;
+            role: "ADMIN" | "USER";
+        };
+        message?: FlashMessage;
     }
 }
 
 export default session({
     secret: process.env.SESSION_SECRET ?? "my-super-secret-secret",
-    store: new MemoryStore(),
-    resave: true,
-    saveUninitialized: true,
+    store: mongoStore,           
+    resave: false,               
+    saveUninitialized: false,    
     cookie: {
         maxAge: 1000 * 60 * 60 * 24 * 7, // 1 week
+        
     }
 });

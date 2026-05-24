@@ -86,12 +86,12 @@
     {
         "id": 5,
         "name": "Itachi Uchiha",
-        "description": "Itachi Uchiha is een lid van het Uchiha-clan en een geniaal shinobi. Hij is beroemd om zijn Mangekyo Sharingan en zijn Actieken.",
+        "description": "Itachi Uchiha is een lid van het Uchiha-clan en een geniaal shinobi. Hij is beroemd om zijn Mangekyo Sharingan en zijn Akatsuki (ex-Jonin) status.",
         "age": 40,
         "active": true,
         "birthdate": "1984-06-09",
         "image_url": "https://raw.githubusercontent.com/NabilHabrani/Naruto/refs/heads/main/public/images/itachi.png",
-        "position": "Actieken (ex-Jonin)",
+        "position": "Akatsuki (ex-Jonin)",
         "hobbies": [
             "Piano spelen",
             "Reflectie",
@@ -99,7 +99,7 @@
         ],
         "team": {
             "id": 2,
-            "name": "Actieken",
+            "name": "Akatsuki",
             "leader": "Itachi Uchiha",
             "village": "Onafhankelijk"
         }

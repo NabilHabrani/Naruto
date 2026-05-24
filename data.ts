@@ -92,14 +92,6 @@ export async function updateCharacter(id: number, updatedData: Characters) {
     }
 }
 
-export const sortFields = [
-    { value: 'name', text: 'NAME' },
-    { value: 'birthdate', text: 'BIRTDATE' },
-    { text: "ABILITIES" },
-    { value: 'role', text: 'ROLE' },
-    { value: 'available', text: 'AVAILABLE' },
-    { text: 'VIEW' }
-];
 
 export const sortDirections = [
     { value: 'asc', text: 'Ascending' },
@@ -112,7 +104,6 @@ async function createDefaultUsers() {
         return;
     }
     
-    // Admin user
     let adminUsername: string = process.env.ADMIN_USERNAME ?? "admin";
     let adminPassword: string = process.env.ADMIN_PASSWORD ?? "admin123";
     
@@ -121,19 +112,31 @@ async function createDefaultUsers() {
         password: await bcrypt.hash(adminPassword, saltRounds),
         role: "ADMIN"
     });
+
+    await userCollection.insertOne({
+        username: "user",
+        password: await bcrypt.hash("user123", saltRounds),
+        role: "USER"
+    });
     
     
     console.log("Default users created");
 }
-export async function registerUser(username: string | undefined, password: string | undefined, role: "ADMIN" | "USER") {
-    if (username === undefined || password === undefined) {
-        throw new Error("ADMIN_EMAIL and ADMIN_PASSWORD must be set in environment");
+    export async function registerUser(username: string, password: string, role: "ADMIN" | "USER") {
+    const existing = await userCollection.findOne({ username: username });
+    if (existing) {
+        throw new Error("Username already exists");
     }
-
-
+    
+    const hashedPassword = await bcrypt.hash(password, saltRounds);
+    
+    await userCollection.insertOne({
+        username: username,
+        password: hashedPassword,
+        role: role
+    });
     
 }
-    
 
 export async function loginUser(username: string, password: string) {
     if (username === "" || password === "") {

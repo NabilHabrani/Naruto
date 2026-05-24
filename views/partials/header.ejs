@@ -11,15 +11,24 @@
 </head>
 
 <body class="">
-        <header>
+    <header>
         <nav>
             <div class="logo">
                 <img src="/images/logo2.png" alt="logo" width="200">
             </div>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/characters">Characters</a></li>
+                <li><a href="/characters">Karakters</a></li>
+                <% if (user) { %>
+                    <li>
+                        <form action="/logout" method="post" class="logout-form">
+                            <button type="submit" class="logout-button">Uitloggen</button>
+                        </form>
+                    </li>
+                    <% if (user.role === "ADMIN") { %>
+                        <li><span class="admin-badge">Admin</span></li>
+                    <% } %>
+                <% } %>
             </ul>
         </nav>
     </header>
-

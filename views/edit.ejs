@@ -10,7 +10,7 @@
                     <input type="text" id="name" name="name" value="<%= character.name %>">
                 </label>
 
-                <label for="position">Positie (select):
+                <label for="position">Positie
                     <select id="position" name="position">
                         <option value="Hokage" <% if (character.position === 'Hokage') { %>selected<% } %>>Hokage</option>
                         <option value="Jonin" <% if (character.position === 'Jonin') { %>selected<% } %>>Jonin</option>
@@ -24,17 +24,23 @@
                     <input type="number" id="age" name="age" value="<%= character.age %>">
                 </label>
 
-                <label for="birthdate">Geboortedatum:
+                <label for="birthdate">Geboortedatum
                     <input type="date" id="birthdate" name="birthdate" value="<%= character.birthdate %>">
                 </label>
 
-                <label for="description">Beschrijving:
+                <label for="description">Beschrijving
                     <textarea id="description" name="description" rows="4"><%= character.description %></textarea>
                 </label>
 
-                <label for="hobbies">Hobbies (komma gescheiden):
+                <label for="hobbies">Hobbies
                     <input type="text" id="hobbies" name="hobbies" value="<%= character.hobbies.join(', ') %>">
                 </label>
+
+                <input type="hidden" name="image_url" value="<%= character.image_url %>">
+
+                <input type="hidden" name="teamVillage" value="<%= character.team.village %>">
+                <input type="hidden" name="teamName" value="<%= character.team.name %>">
+                <input type="hidden" name="teamId" value="<%= character.team.id %>">
 
 
                 <button type="submit">Opslaan</button>
