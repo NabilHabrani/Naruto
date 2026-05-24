@@ -299,6 +299,10 @@ footer {
         overflow-x: auto;
         white-space: nowrap;
     }
+
+    .search{
+        max-width: 100%;
+    }
 }
  
 
@@ -332,11 +336,9 @@ html, body {
 
 
 
-/* ============== HEADER ============== */
 
 
 
-/* ============== GRID ============== */
 .characters-grid {
     max-width: 1400px;
     margin: 0 auto;
@@ -384,7 +386,6 @@ html, body {
         12px 20px 36px rgba(60, 35, 10, 0.40);
 }
 
-/* Decorative corner marks (like old scroll fasteners) */
 .card-corner {
     position: absolute;
     width: 22px;
@@ -400,7 +401,6 @@ html, body {
 .card-corner.bottom-left { bottom: 10px; left: 10px; }
 .card-corner.bottom-right { bottom: 10px; right: 10px; }
 
-/* Card header strip */
 .card-header {
     display: flex;
     justify-content: space-between;
@@ -418,7 +418,6 @@ html, body {
 }
 
 
-/* Portrait frame */
 .portrait-frame {
     position: relative;
     width: 200px;
@@ -445,7 +444,6 @@ html, body {
 }
 
 
-/* Name + Position */
 .character-name {
     font-family: 'Cinzel', 'Noto Serif JP', serif;
     font-size: 1.7rem;
@@ -480,11 +478,6 @@ html, body {
     line-height: 1.7;
 }
 
-/* Info grid */
-
-/* ============== FOOTER ============== */
-
-/* ============== RESPONSIVE ============== */
 @media (max-width: 600px) {
     body {
         padding: 24px 14px 60px;
@@ -517,7 +510,6 @@ html, body {
     }
 }
 
-/* ============== PRINT (echte ninja rol) ============== */
 @media print {
     body {
         background: #f5e5c2;
@@ -566,7 +558,6 @@ html, body {
     font-weight: 700;
 }
 
-/* Section headings */
 .section-heading {
     font-family: 'Cinzel', serif;
     font-size: 0.82rem;
@@ -659,7 +650,6 @@ html, body {
             transparent 5px
         ),
         linear-gradient(180deg, #f0dcb0 0%, #e6cb95 100%);
-    /* Torn-edge feel via custom border */
     border: 2px solid var(--ink-faded);
     border-radius: 4px;
     box-shadow:
@@ -706,7 +696,6 @@ html, body {
 
 /* edit*/
 
-/* Edit Section - zelfde stijl als detail pagina */
 .edit-section {
     display: flex;
     justify-content: center;
@@ -766,7 +755,6 @@ html, body {
     font-size: 1rem;
 }
 
-/* Form styling */
 .edit-form {
     display: flex;
     flex-direction: column;
@@ -812,7 +800,6 @@ html, body {
     min-height: 100px;
 }
 
-/* Buttons */
 .edit-form button,
 .edit-form a {
     font-family: 'Cinzel', serif;
@@ -854,7 +841,6 @@ html, body {
     transform: translateY(-1px);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .edit-card {
         width: 90%;
@@ -871,8 +857,7 @@ html, body {
     }
 }
 
-
-/* ============== LOGIN & REGISTER ============== */
+ /*login*/
 .login-section,
 .registreer-section {
     flex: 1 1 auto;
@@ -909,7 +894,6 @@ html, body {
 
 
 
-/* Titels */
 .login-section h1,
 .registreer-h1 {
     font-family: 'Cinzel', serif;
@@ -938,7 +922,6 @@ html, body {
     font-size: 0.9rem;
 }
 
-/* Form groups */
 .form-group {
     display: flex;
     flex-direction: column;
@@ -946,7 +929,6 @@ html, body {
     margin-bottom: 14px;
 }
 
-/* Labels */
 .login-section label,
 .registreer-form label,
 .label-username,
@@ -962,7 +944,6 @@ html, body {
     margin-top: 14px;
 }
 
-/* Inputs */
 .login-section input,
 .registreer-form input {
     width: 100%;
@@ -985,7 +966,6 @@ html, body {
     background-color: #fff5e6 !important;
 }
 
-/* Knoppen */
 .login-section button[type="submit"],
 .registreer-button {
     width: 100%;
@@ -1018,7 +998,6 @@ html, body {
     transform: scale(0.98);
 }
 
-/* Foutmeldingen */
 .success,
 .error,
 .error-message {
@@ -1043,7 +1022,6 @@ html, body {
     color: var(--seal-red-dark);
 }
 
-/* Links onderaan */
 .register-link,
 .login-link {
     text-align: center;
@@ -1067,7 +1045,6 @@ html, body {
     color: #b06010;
 }
 
-/* Responsive */
 @media (max-width: 600px) {
     .login-section,
     .registreer-section {
